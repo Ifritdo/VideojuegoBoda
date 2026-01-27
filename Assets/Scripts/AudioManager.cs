@@ -31,10 +31,6 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("AudioManager Awake");
-
-        Debug.Log("MusicSource: " + musicSource);
-        Debug.Log("SFXSource: " + sfxSource);
 
         if (musicSource == null || sfxSource == null)
         {
