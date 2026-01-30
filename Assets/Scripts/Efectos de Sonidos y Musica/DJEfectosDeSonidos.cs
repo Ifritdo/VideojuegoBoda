@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuButtons : MonoBehaviour
+public class DJEfectosDeSonidos : MonoBehaviour
 {
     public void StartGame()
     {

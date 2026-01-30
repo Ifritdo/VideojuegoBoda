@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: Questions_01
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 01
+  QuestionText: "\xBFDonde le gusta a Marina y Juanpi tener citas?"
+  Category: {fileID: 11400000, guid: 6dfe95aa2c317c546880f60ead2c8149, type: 2}
+  CorrectAnswer: En el Cine
+  WrongAnswers:
+  - En la Plaza
+  - En WildBurger
+  - En la Cancha de Racing
+  - En la pileta
+  difficulty: 1

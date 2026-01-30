@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 1346061834}
   - component: {fileID: 1346061833}
   m_Layer: 0
-  m_Name: MenuSong
+  m_Name: DJMusica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 2069292819}
   - component: {fileID: 2069292818}
   m_Layer: 0
-  m_Name: MenuButtons
+  m_Name: DJEfectosdeSonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
