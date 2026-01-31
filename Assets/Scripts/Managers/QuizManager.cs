@@ -102,9 +102,25 @@ public class QuizManager : MonoBehaviour
         currentAnswers.Clear();
 
         currentAnswers.Add(currentQuestion.CorrectAnswer);
-        currentAnswers.AddRange(currentQuestion.WrongAnswers);
 
-        // Mezclar
+        List<string> wrongPool = new List<string>(currentQuestion.WrongAnswers);
+
+        wrongPool.RemoveAll(w => w == currentQuestion.CorrectAnswer);
+
+        for (int i = 0; i < wrongPool.Count; i++)
+        {
+            int randomIndex = Random.Range(i, wrongPool.Count);
+            (wrongPool[i], wrongPool[randomIndex]) =
+                (wrongPool[randomIndex], wrongPool[i]);
+        }
+
+        int wrongsToTake = Mathf.Min(3, wrongPool.Count);
+
+        for (int i = 0; i < wrongsToTake; i++)
+        {
+            currentAnswers.Add(wrongPool[i]);
+        }
+
         for (int i = 0; i < currentAnswers.Count; i++)
         {
             int randomIndex = Random.Range(i, currentAnswers.Count);
@@ -112,6 +128,7 @@ public class QuizManager : MonoBehaviour
                 (currentAnswers[randomIndex], currentAnswers[i]);
         }
     }
+
 
     // =========================
     // PUBLIC GETTERS
