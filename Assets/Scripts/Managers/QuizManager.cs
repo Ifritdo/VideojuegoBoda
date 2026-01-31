@@ -77,6 +77,23 @@ public class QuizManager : MonoBehaviour
     }
 
     // =========================
+    // CATEGORY SELECTION
+    // =========================
+
+    public CategorySO GetRandomCategory()
+    {
+        if (quizDatabase == null || quizDatabase.categories == null || quizDatabase.categories.Count == 0)
+        {
+            Debug.LogError("QuizDatabase no tiene categorías");
+            return null;
+        }
+
+        int index = Random.Range(0, quizDatabase.categories.Count);
+        return quizDatabase.categories[index];
+    }
+
+
+    // =========================
     // ANSWERS
     // =========================
 

@@ -15,11 +15,11 @@ public class QuizUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI categoryText;
     [SerializeField] private List<Button> answerButtons;
 
-    private void Start()
-    {
-        // TEMPORAL: elegimos una categoría asignada, ELIMINAR cuando se tenga la ruleta de azar
-        ShowQuestion(testCategory);
-    }
+    //private void Start()
+    //{
+    //    // TEMPORAL: elegimos una categoría asignada, ELIMINAR cuando se tenga la ruleta de azar
+    //    ShowQuestion(testCategory);
+    //}
 
     public void ShowQuestion(CategorySO category)
     {
