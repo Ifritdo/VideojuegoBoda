@@ -1,0 +1,87 @@
+﻿using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance;
+
+    [Header("Config")]
+    public int pointsPerQuestion = 1000;
+    public float maxTime = 20f;
+
+    private float currentTime;
+    private bool questionActive;
+
+    private int totalScore = 0;
+    private int questionsAnswered = 0;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update()
+    {
+        if (!questionActive) return;
+
+        currentTime -= Time.deltaTime;
+
+        if (currentTime <= 0f)
+        {
+            currentTime = 0f;
+            questionActive = false;
+
+            OnTimeExpired();
+        }
+    }
+
+    // =========================
+    // QUESTION FLOW
+    // =========================
+
+    public void StartQuestion()
+    {
+        currentTime = maxTime;
+        questionActive = true;
+    }
+
+    public void AnswerQuestion(bool isCorrect)
+    {
+        if (!questionActive) return;
+
+        questionActive = false;
+        questionsAnswered++;
+
+        if (isCorrect)
+        {
+            float timeRatio = currentTime / maxTime;
+            int points = Mathf.RoundToInt(pointsPerQuestion * timeRatio);
+            totalScore += points;
+
+            Debug.Log($"✅ Correcto +{points} puntos");
+        }
+        else
+        {
+            Debug.Log("❌ Incorrecto +0 puntos");
+        }
+    }
+
+    private void OnTimeExpired()
+    {
+        questionsAnswered++;
+        Debug.Log("⏱ Tiempo agotado");
+    }
+
+    // =========================
+    // GETTERS
+    // =========================
+
+    public float GetTime() => currentTime;
+    public int GetScore() => totalScore;
+}
