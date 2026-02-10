@@ -46,6 +46,11 @@ public class QuizUI : MonoBehaviour
 
         List<string> answers = quizManager.GetAnswers();
 
+        foreach (var btn in answerButtons)
+        {
+            btn.GetComponent<Image>().color = Color.white;
+        }
+
         for (int i = 0; i < answerButtons.Count; i++)
         {
             int index = i;
@@ -76,12 +81,34 @@ public class QuizUI : MonoBehaviour
         // Avisar al GameManager
         GameManager.Instance.AnswerQuestion(isCorrect);
 
+        // Feedback visual
+        ShowAnswerFeedback(index, isCorrect);
+
         Debug.Log(isCorrect ? "✅ Correcto" : "❌ Incorrecto");
 
         // Más adelante:
-        // - Feedback visual
         // - Fade out
         // - Volver a ruleta
     }
 
+    private void ShowAnswerFeedback(int selectedIndex, bool isCorrect)
+    {
+        Color correctColor = Color.green;
+        Color wrongColor = Color.red;
+
+        if (isCorrect)
+        {
+            answerButtons[selectedIndex]
+                .GetComponent<Image>().color = correctColor;
+        }
+        else
+        {
+            answerButtons[selectedIndex]
+                .GetComponent<Image>().color = wrongColor;
+
+            int correctIndex = quizManager.GetCorrectAnswerIndex();
+            answerButtons[correctIndex]
+                .GetComponent<Image>().color = correctColor;
+        }
+    }
 }

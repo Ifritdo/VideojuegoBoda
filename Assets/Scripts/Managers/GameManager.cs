@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public event Action<int> OnScoreAdded;
 
     [Header("Config")]
     public int pointsPerQuestion = 1000;
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
             float timeRatio = currentTime / maxTime;
             int points = Mathf.RoundToInt(pointsPerQuestion * timeRatio);
             totalScore += points;
+            OnScoreAdded?.Invoke(points); //AVISA A LA UI
 
             Debug.Log($"✅ Correcto +{points} puntos");
         }

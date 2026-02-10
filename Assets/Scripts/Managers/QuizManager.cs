@@ -151,4 +151,8 @@ public class QuizManager : MonoBehaviour
 
         return currentAnswers[index] == currentQuestion.CorrectAnswer;
     }
+    public int GetCorrectAnswerIndex()
+    {
+        return currentAnswers.IndexOf(currentQuestion.CorrectAnswer);
+    }
 }
