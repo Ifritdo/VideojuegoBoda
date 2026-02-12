@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class QuizUI : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class QuizUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI categoryText;
     [SerializeField] private List<Button> answerButtons;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private RouletteFlow rouletteFlow;
 
     private bool answered = false;
 
@@ -86,9 +88,34 @@ public class QuizUI : MonoBehaviour
 
         Debug.Log(isCorrect ? "✅ Correcto" : "❌ Incorrecto");
 
+        StartCoroutine(ReturnToRouletteRoutine());
+
         // Más adelante:
         // - Fade out
-        // - Volver a ruleta
+
+    }
+
+    private IEnumerator ReturnToRouletteRoutine()
+    {
+        // Espera para que el jugador vea el resultado
+        yield return new WaitForSeconds(2.5f);
+
+        // =========================================
+        // AQUÍ IRÁ LA ANIMACIÓN DE CORTINAS
+        // =========================================
+        //
+        // Cuando tengas la animación:
+        // 1. Activás panel cortinas
+        // 2. Esperás a que se cierren
+        // 3. Cambiás de estado (volver a ruleta)
+        // 4. Esperás que se abran
+        //
+        // Ejemplo futuro:
+        // yield return StartCoroutine(CurtainController.CloseAndOpen());
+        //
+        // =========================================
+
+        rouletteFlow.ReturnToRoulette();
     }
 
     private void ShowAnswerFeedback(int selectedIndex, bool isCorrect)

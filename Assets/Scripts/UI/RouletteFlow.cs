@@ -39,4 +39,10 @@ public class RouletteFlow : MonoBehaviour
 
         quizUI.ShowQuestion(category);
     }
+
+    public void ReturnToRoulette()
+    {
+        panelRuleta.SetActive(true);
+    }
+
 }

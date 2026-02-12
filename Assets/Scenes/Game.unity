@@ -1351,7 +1351,7 @@ GameObject:
   - component: {fileID: 1007508869}
   - component: {fileID: 1007508871}
   m_Layer: 0
-  m_Name: QuizUI
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1379,6 +1379,7 @@ MonoBehaviour:
   - {fileID: 1671844209}
   - {fileID: 1318111848}
   timerText: {fileID: 1746378197}
+  rouletteFlow: {fileID: 1100816168}
 --- !u!4 &1007508870
 Transform:
   m_ObjectHideFlags: 0
