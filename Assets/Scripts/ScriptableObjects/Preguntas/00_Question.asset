@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: 00_Question
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 00
+  QuestionText: "\xBFEn qu\xE9 mes nacieron los novios?"
+  Category: {fileID: 11400000, guid: 0598a07de95317d49a02f2a49a6bf866, type: 2}
+  CorrectAnswer: Abril
+  WrongAnswers:
+  - Enero
+  - Febrero
+  - Marzo
+  - Mayo
+  - Junio
+  - Julio
+  - Agosto
+  - Septiembre
+  - Octubre
+  - Noviembre
+  - Diciembre
+  difficulty: 1

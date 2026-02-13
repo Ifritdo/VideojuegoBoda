@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: 16_Question
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 16
+  QuestionText: "\xBFQu\xE9 ritual tienen todos los a\xF1os los novios?"
+  Category: {fileID: 11400000, guid: 37f6a9afdd31b4441813019268079c1b, type: 2}
+  CorrectAnswer: "Ir al barrio chino en la semana del A\xF1o nuevo chino"
+  WrongAnswers:
+  - Ir al October Fest
+  - 'Salir a cenar todos los San Valentin '
+  - Llevarle sus cartitas a Papa Noel
+  - Jugar videojuegos juntos en San Valentin
+  - Ir a tocar Rock pesado en navidad
+  - "Ir a bailar disco todas las noches \xA1Oh Yeah!"
+  difficulty: 1

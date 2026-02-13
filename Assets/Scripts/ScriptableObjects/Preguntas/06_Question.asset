@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: 06_Question
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 06
+  QuestionText: "\xBFC\xF3mo se llaman los testigos?"
+  Category: {fileID: 11400000, guid: 26f0a4b911ad957449a5643e039c56cb, type: 2}
+  CorrectAnswer: Soledad/Alejandra y Cristian/Julian
+  WrongAnswers:
+  - Fiorella/Blanca y Patricio/German
+  - Candela/Leticia y Fabio/Mario
+  - Sofia/Rocio y Kilian/Ian
+  - Julieta/Alejandra y Cristian/Nacho
+  - Soledad/Lara y Ricardo/Julian
+  - Soledad/Lurdes y Broly/Julian
+  - Fernanda/Alejandra y Cristian/Trunks
+  difficulty: 1

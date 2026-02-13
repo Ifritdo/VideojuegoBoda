@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: 07_Question
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 07
+  QuestionText: 'Cuando Juampi sale con los amigos no puede faltar:'
+  Category: {fileID: 11400000, guid: 26f0a4b911ad957449a5643e039c56cb, type: 2}
+  CorrectAnswer: Cerveza
+  WrongAnswers:
+  - Vino
+  - Fernet
+  - Gin Tonic
+  - Red Bull
+  - Monster
+  - Comida
+  difficulty: 1

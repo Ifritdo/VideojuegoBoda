@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: 04_Question
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 04
+  QuestionText: 'Juampi es muy famoso y conocido por hacer:'
+  Category: {fileID: 11400000, guid: 0598a07de95317d49a02f2a49a6bf866, type: 2}
+  CorrectAnswer: "Unas geniales pizzas caseras (\xA1y a la parrilla mejor!)"
+  WrongAnswers:
+  - Muy ricos asados
+  - Unas buenas pastas caseras
+  - Un guiso genial para el invierno
+  - Unas increibles hamburguejas al vapor
+  - Los mejores super panchos de zona sur
+  - Empanadas
+  - Milanesas con papas fritas
+  difficulty: 1

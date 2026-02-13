@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: 14_Question
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 14
+  QuestionText: "\xBFD\xF3nde adoran ir los novios de viaje?"
+  Category: {fileID: 11400000, guid: 37f6a9afdd31b4441813019268079c1b, type: 2}
+  CorrectAnswer: Aman las playas
+  WrongAnswers:
+  - "Adoran las monta\xF1as"
+  - "Prefieren zonas des\xE9rticas"
+  - No pueden estar lejos de las grandes ciudades
+  - No salen del depto
+  - No viajan, hay que ahorrar
+  - Los bosques de Palermo
+  - El Cedro
+  - A Namek
+  difficulty: 1

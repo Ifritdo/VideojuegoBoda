@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
-  m_Name: Questions
+  m_Name: 10_Question
   m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
-  id: 00
-  QuestionText: "\xBFDonde se Conocieron Marina y Juanpi?"
-  Category: {fileID: 11400000, guid: 6dfe95aa2c317c546880f60ead2c8149, type: 2}
-  CorrectAnswer: En Tinder
+  id: 10
+  QuestionText: "\xBFQu\xE9 se imagina Juampi que hace Mari cuando trabaja?"
+  Category: {fileID: 11400000, guid: 5ba15df48c9297945a74754011d9e812, type: 2}
+  CorrectAnswer: Todas son correctas
   WrongAnswers:
-  - En un Evento de Kpop
-  - En el Trabajo
-  - En Europa
-  - En la Escuela
+  - Mirar series y comer cosas ricas
+  - Chismosear toda la noche con amigos
+  - Dormir sin gatos maullando
   difficulty: 1

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: 13_Question
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 13
+  QuestionText: "\xBFCu\xE1l fue el primer destino de viaje que tuvieron los novios?"
+  Category: {fileID: 11400000, guid: 37f6a9afdd31b4441813019268079c1b, type: 2}
+  CorrectAnswer: Misiones (las cataratas)
+  WrongAnswers:
+  - Mendoza (aguante el vino)
+  - Cordoba (capital)
+  - Europa
+  - Corea del Norte
+  - Chile
+  - U.S.A (california)
+  - Japon
+  difficulty: 1

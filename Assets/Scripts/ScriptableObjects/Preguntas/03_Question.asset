@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
-  m_Name: Questions_01
+  m_Name: 03_Question
   m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
-  id: 01
-  QuestionText: "\xBFDonde le gusta a Marina y Juanpi tener citas?"
-  Category: {fileID: 11400000, guid: 6dfe95aa2c317c546880f60ead2c8149, type: 2}
-  CorrectAnswer: En el Cine
+  id: 03
+  QuestionText: "\xBFCu\xE1l de los dos es m\xE1s familiero?"
+  Category: {fileID: 11400000, guid: 0598a07de95317d49a02f2a49a6bf866, type: 2}
+  CorrectAnswer: Ambos por igual
   WrongAnswers:
-  - En la Plaza
-  - En WildBurger
-  - En la Cancha de Racing
-  - En la pileta
+  - Juampi (le encanta cuidar sobrinos)
+  - Mari (tiene para entretenerse)
+  - Ninguno, siempre se escapan de visitar familia
   difficulty: 1

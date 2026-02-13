@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
+  m_Name: 15_Question
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  id: 15
+  QuestionText: "\xBFQu\xE9 gato adoptaron primero?"
+  Category: {fileID: 11400000, guid: 37f6a9afdd31b4441813019268079c1b, type: 2}
+  CorrectAnswer: "Tokyo (la atigrada) fue primero y Boris fue el gato que le buscaron
+    porque se deprimi\xF3 post primera mudanza"
+  WrongAnswers:
+  - Simon
+  - Lola
+  - Los encontraron a los dos al mismo tiempo
+  - En realidad, tuvieron uno naranja primero que huyo porque no los soportaba a
+    los dos.
+  - Boris (el negro) fue primero y por ser un malcriado buscaron a Tokyo para que
+    juegue
+  difficulty: 1
