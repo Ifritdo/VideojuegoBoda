@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        }
+
         if (!questionActive) return;
 
         currentTime -= Time.deltaTime;
@@ -43,6 +48,7 @@ public class GameManager : MonoBehaviour
             questionActive = false;
 
             OnTimeExpired();
+            CheckGameEnd();
         }
     }
 
@@ -76,12 +82,28 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("❌ Incorrecto +0 puntos");
         }
+
+        CheckGameEnd();
     }
 
     private void OnTimeExpired()
     {
         questionsAnswered++;
         Debug.Log("⏱ Tiempo agotado");
+    }
+
+    private void CheckGameEnd()
+    {
+        if (questionsAnswered >= maxQuestions)
+        {
+            EndGame();
+        }
+    }
+
+    private void EndGame()
+    {
+        ScoreManager.Instance.SetFinalScore(totalScore);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Puntajes");
     }
 
     // =========================
