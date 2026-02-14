@@ -22,7 +22,7 @@ public class WheelController : MonoBehaviour
         isSpinning = true;
         GetComponent<Animator>().SetTrigger("Spin");
     }
-
+    //eso juli programa si no te volveras GAY 
     // LLAMADO DESDE LA ANIMACIÓN
     public void AnimationFinished()
     {
