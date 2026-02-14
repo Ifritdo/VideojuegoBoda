@@ -527,6 +527,12 @@ MonoBehaviour:
   - id: Boton
     clip: {fileID: 8300000, guid: b6a403e6d54fab14f8749df14065ac12, type: 3}
     volume: 1
+  - id: RespuestaCorrecta
+    clip: {fileID: 8300000, guid: f56a8458f1c043a42811fb7bc644bf1e, type: 3}
+    volume: 1
+  - id: RespuestaIncorrecta
+    clip: {fileID: 8300000, guid: bf6712402ab44d643a4e821c8a77419e, type: 3}
+    volume: 1
   musicVolume: 1
   sfxVolume: 1
 --- !u!1 &1346061832

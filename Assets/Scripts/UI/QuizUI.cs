@@ -6,8 +6,6 @@ using System.Collections;
 
 public class QuizUI : MonoBehaviour
 {
-    [SerializeField] private CategorySO testCategory; // TEMPORAL: Quitar cuando se implemente la rueda que eliga la categoria al azar
-
     [Header("References")]
     [SerializeField] private QuizManager quizManager;
 
@@ -75,6 +73,11 @@ public class QuizUI : MonoBehaviour
         answered = true;
 
         bool isCorrect = quizManager.SubmitAnswer(index);
+
+        if (isCorrect)
+            AudioManager.Instance.PlaySFX("RespuestaCorrecta");
+        else
+            AudioManager.Instance.PlaySFX("RespuestaIncorrecta");
 
         // Bloquear botones
         foreach (var btn in answerButtons)

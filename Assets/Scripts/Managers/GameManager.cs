@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public event Action<int> OnScoreAdded;
 
+    [Header("Cantidad de Rondas")]
+    [SerializeField] private int maxQuestions = 10;
+
     [Header("Config")]
     public int pointsPerQuestion = 1000;
     public float maxTime = 20f;
