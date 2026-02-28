@@ -32,38 +32,56 @@ public class ScoreManager : MonoBehaviour
         return finalScore;
     }
 
-    public void SaveScore(string playerName)
+    public int SaveScore(string playerName)
     {
-        scores.Add(new ScoreData(playerName, finalScore));
+        ScoreData newScore = new ScoreData(playerName, finalScore);
+        scores.Add(newScore);
+
         scores.Sort((a, b) => b.points.CompareTo(a.points));
 
-        if (scores.Count > 10)
-            scores.RemoveAt(10);
-
         SaveToPrefs();
+
+        return scores.IndexOf(newScore) + 1;
+    }
+
+    public int GetPlayerPosition(int points)
+    {
+        scores.Sort((a, b) => b.points.CompareTo(a.points));
+
+        for (int i = 0; i < scores.Count; i++)
+        {
+            if (scores[i].points == points)
+                return i + 1;
+        }
+
+        return -1;
     }
 
     void SaveToPrefs()
     {
+        PlayerPrefs.SetInt("ScoreCount", scores.Count);
+
         for (int i = 0; i < scores.Count; i++)
         {
             PlayerPrefs.SetString("Name" + i, scores[i].name);
             PlayerPrefs.SetInt("Points" + i, scores[i].points);
         }
+
+        PlayerPrefs.Save();
     }
+
 
     void LoadScores()
     {
         scores.Clear();
 
-        for (int i = 0; i < 10; i++)
+        int count = PlayerPrefs.GetInt("ScoreCount", 0);
+
+        for (int i = 0; i < count; i++)
         {
-            if (PlayerPrefs.HasKey("Name" + i))
-            {
-                string name = PlayerPrefs.GetString("Name" + i);
-                int points = PlayerPrefs.GetInt("Points" + i);
-                scores.Add(new ScoreData(name, points));
-            }
+            string name = PlayerPrefs.GetString("Name" + i);
+            int points = PlayerPrefs.GetInt("Points" + i);
+            scores.Add(new ScoreData(name, points));
         }
     }
 }

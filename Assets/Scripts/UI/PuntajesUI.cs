@@ -4,9 +4,6 @@ using TMPro;
 
 public class PuntajesUI : MonoBehaviour
 {
-    [Header("Input")]
-    [SerializeField] private TMP_InputField nameInput;
-
     [Header("Podio")]
     [SerializeField] private TextMeshProUGUI firstName;
     [SerializeField] private TextMeshProUGUI firstScore;
@@ -25,15 +22,6 @@ public class PuntajesUI : MonoBehaviour
 
     private void Start()
     {
-        DisplayRanking();
-    }
-
-    public void ConfirmScore()
-    {
-        if (string.IsNullOrWhiteSpace(nameInput.text))
-            return;
-
-        ScoreManager.Instance.SaveScore(nameInput.text);
         DisplayRanking();
     }
 
