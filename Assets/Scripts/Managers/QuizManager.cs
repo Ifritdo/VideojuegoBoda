@@ -33,6 +33,8 @@ public class QuizManager : MonoBehaviour
 
     public void GenerateQuestion()
     {
+        if (GameManager.Instance.GetQuestionsAnswered() >= GameManager.Instance.GetMaxQuestions())
+            return;
         currentQuestion = GetRandomUnusedQuestion(currentCategory);
 
         if (currentQuestion == null)

@@ -13,11 +13,17 @@ public class GameManager : MonoBehaviour
     public int pointsPerQuestion = 1000;
     public float maxTime = 20f;
 
+    [Header("UI")]
+    [SerializeField] private GameOverUI gameOverUI;
+
     private float currentTime;
     private bool questionActive;
 
     private int totalScore = 0;
     private int questionsAnswered = 0;
+
+    public int GetQuestionsAnswered() => questionsAnswered;
+    public int GetMaxQuestions() => maxQuestions;
 
     private void Awake()
     {
@@ -97,13 +103,21 @@ public class GameManager : MonoBehaviour
         if (questionsAnswered >= maxQuestions)
         {
             EndGame();
+            return;
         }
+        //QuestionManager.Instance.GenerateQuestion();
     }
 
     private void EndGame()
     {
+        questionActive = false;
+        enabled = false;
         ScoreManager.Instance.SetFinalScore(totalScore);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Puntajes");
+
+        if (gameOverUI != null)
+        {
+            gameOverUI.Show(totalScore);
+        }
     }
 
     // =========================

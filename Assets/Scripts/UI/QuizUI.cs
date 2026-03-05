@@ -31,7 +31,7 @@ public class QuizUI : MonoBehaviour
             return;
         }
 
-        timerText.text = $"⏱ {time:F1}";
+        timerText.text = $"Tiempo: {time:F1}";
     }
 
     public void ShowQuestion(CategorySO category)
