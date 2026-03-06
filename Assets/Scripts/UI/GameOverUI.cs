@@ -11,17 +11,19 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] private TMP_Text rankingMessageText;
     [SerializeField] private GameObject viewRankingButton;
 
-    private void Awake()
-    {
-        gameObject.SetActive(false);
-    }
+    //private void Awake()
+    //{
+    //    gameObject.SetActive(false);
+    //}
 
     public void Show(int finalScore)
     {
+        Debug.Log("SHOW EJECUTADO");
         gameObject.SetActive(true);
 
-        finalScoreText.text = finalScore.ToString();
-        viewRankingButton.SetActive(false);
+        //finalScoreText.text = finalScore.ToString();
+        finalScoreText.text = "Puntaje final: " + finalScore;
+        //viewRankingButton.SetActive(false);
     }
 
     public void OnConfirm()
@@ -31,7 +33,8 @@ public class GameOverUI : MonoBehaviour
 
         int position = ScoreManager.Instance.SaveScore(nameInput.text);
 
-        positionText.text = position.ToString();
+        //positionText.text = position.ToString();
+        positionText.text = "Posición: #" + position;
 
         if (position <= 20)
             rankingMessageText.text = "¡Entraste al Top 20!";

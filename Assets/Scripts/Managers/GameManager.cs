@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     public int GetQuestionsAnswered() => questionsAnswered;
     public int GetMaxQuestions() => maxQuestions;
+    private bool gameEnded = false;
 
     private void Awake()
     {
@@ -96,27 +97,42 @@ public class GameManager : MonoBehaviour
     {
         questionsAnswered++;
         Debug.Log("⏱ Tiempo agotado");
+
+        CheckGameEnd();
     }
 
     private void CheckGameEnd()
     {
+        Debug.Log("Preguntas respondidas: " + questionsAnswered);
+
         if (questionsAnswered >= maxQuestions)
         {
+            Debug.Log("FIN DEL JUEGO");
             EndGame();
             return;
         }
-        //QuestionManager.Instance.GenerateQuestion();
     }
 
     private void EndGame()
     {
+        if (gameEnded) return;
+
+        gameEnded = true;
         questionActive = false;
         enabled = false;
+
+        Debug.Log("Intentando mostrar GameOverUI");
+
         ScoreManager.Instance.SetFinalScore(totalScore);
 
         if (gameOverUI != null)
         {
+            Debug.Log("GameOverUI encontrado");
             gameOverUI.Show(totalScore);
+        }
+        else
+        {
+            Debug.LogError("GameOverUI ES NULL");
         }
     }
 

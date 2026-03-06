@@ -33,8 +33,12 @@ public class QuizManager : MonoBehaviour
 
     public void GenerateQuestion()
     {
+        if (GameManager.Instance == null)
+            return;
+
         if (GameManager.Instance.GetQuestionsAnswered() >= GameManager.Instance.GetMaxQuestions())
             return;
+
         currentQuestion = GetRandomUnusedQuestion(currentCategory);
 
         if (currentQuestion == null)
@@ -45,6 +49,8 @@ public class QuizManager : MonoBehaviour
 
         usedQuestions[currentCategory].Add(currentQuestion);
         PrepareAnswers();
+
+        GameManager.Instance.StartQuestion();
     }
 
     private QuestionSO GetRandomUnusedQuestion(CategorySO category)
