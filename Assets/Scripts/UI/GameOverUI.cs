@@ -46,6 +46,6 @@ public class GameOverUI : MonoBehaviour
 
     public void GoToRanking()
     {
-        SceneManager.LoadScene("Ranking");
+        SceneManager.LoadScene("Puntajes");
     }
 }
