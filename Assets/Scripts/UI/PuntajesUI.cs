@@ -27,6 +27,7 @@ public class PuntajesUI : MonoBehaviour
 
     void DisplayRanking()
     {
+
         var scores = ScoreManager.Instance.scores;
 
         // ===== PODIO =====

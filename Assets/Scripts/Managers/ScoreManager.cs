@@ -46,15 +46,18 @@ public class ScoreManager : MonoBehaviour
 
     public int GetPlayerPosition(int points)
     {
-        scores.Sort((a, b) => b.points.CompareTo(a.points));
+        int position = scores.Count + 1;
 
         for (int i = 0; i < scores.Count; i++)
         {
-            if (scores[i].points == points)
-                return i + 1;
+            if (points > scores[i].points)
+            {
+                position = i + 1;
+                break;
+            }
         }
 
-        return -1;
+        return position;
     }
 
     void SaveToPrefs()
@@ -83,5 +86,10 @@ public class ScoreManager : MonoBehaviour
             int points = PlayerPrefs.GetInt("Points" + i);
             scores.Add(new ScoreData(name, points));
         }
+    }
+    public void ClearScores() // Temporal
+    {
+        PlayerPrefs.DeleteAll();
+        scores.Clear();
     }
 }

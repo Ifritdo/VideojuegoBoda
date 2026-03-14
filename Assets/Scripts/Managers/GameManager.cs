@@ -142,4 +142,6 @@ public class GameManager : MonoBehaviour
 
     public float GetTime() => currentTime;
     public int GetScore() => totalScore;
+
+
 }
