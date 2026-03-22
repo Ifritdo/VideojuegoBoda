@@ -157,7 +157,9 @@ public class QuizManager : MonoBehaviour
         if (index < 0 || index >= currentAnswers.Count)
             return false;
 
-        return currentAnswers[index] == currentQuestion.CorrectAnswer;
+        bool esCorrecta = currentAnswers[index] == currentQuestion.CorrectAnswer;
+        StatsManager.instance.RegistrarRespuesta(currentQuestion, esCorrecta);
+        return esCorrecta;
     }
     public int GetCorrectAnswerIndex()
     {

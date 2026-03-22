@@ -99,6 +99,7 @@ public class PuntajesUI : MonoBehaviour
 
     public void BackToMenu()
     {
+        StatsManager.instance.JugadorCompleto();
         SceneManager.LoadScene("Menu");
     }
 }
