@@ -1155,10 +1155,13 @@ MonoBehaviour:
   sfxSource: {fileID: 1639898983}
   musicTracks:
   - id: Menu
-    clip: {fileID: 8300000, guid: 833eff759b9fa8341a9396baba64d985, type: 3}
+    clip: {fileID: 8300000, guid: d0dc2baa9cacb714e976ddfb2328e801, type: 3}
     volume: 1
   - id: Game
-    clip: {fileID: 8300000, guid: 73644100190663b4ead71110d9dd6772, type: 3}
+    clip: {fileID: 8300000, guid: b17a698ad6fa33349b83df05706b90cb, type: 3}
+    volume: 1
+  - id: Puntajes
+    clip: {fileID: 8300000, guid: 01a140efaa40479419b7937ca342c3da, type: 3}
     volume: 1
   sfxClips:
   - id: Boton

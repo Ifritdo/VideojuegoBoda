@@ -4994,6 +4994,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuizManager
   quizDatabase: {fileID: 11400000, guid: 6498cc9136c1b6341a521bc7849d7a88, type: 2}
+--- !u!1 &1991097717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991097719}
+  - component: {fileID: 1991097718}
+  m_Layer: 0
+  m_Name: DJEfectosDeSonido
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1991097718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991097717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4294d334c29a04245854092096665fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DJEfectosDeSonidos
+--- !u!4 &1991097719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991097717}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.79808, y: 1.51698, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2028548295
 GameObject:
   m_ObjectHideFlags: 0
@@ -5512,9 +5556,10 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1856417273}
   - {fileID: 1955328723}
-  - {fileID: 144380654}
   - {fileID: 2028548299}
   - {fileID: 1210747843}
   - {fileID: 1007508870}
   - {fileID: 1100816169}
   - {fileID: 682305481}
+  - {fileID: 144380654}
+  - {fileID: 1991097719}
