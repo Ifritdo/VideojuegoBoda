@@ -3,12 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class DJEfectosDeSonidos : MonoBehaviour
 {
-    public void StartGame()
+    public void ButtonClick()
     {
         // SFX de click
         AudioManager.Instance.PlaySFX("Boton");
-
-        // Cargar escena Game
-        SceneManager.LoadScene("Game");
     }
 }

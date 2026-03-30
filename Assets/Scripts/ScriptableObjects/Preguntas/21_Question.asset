@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
-  m_Name: 13_Question
+  m_Name: 21_Question
   m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
-  id: 13
-  QuestionText: "\xBFCu\xE1l fue el primer destino de viaje que tuvieron los novios?"
+  id: 21
+  QuestionText: "\xBFQu\xE9 edad tiene Tokyo (la primer gata adoptada)?"
   Category: {fileID: 11400000, guid: 37f6a9afdd31b4441813019268079c1b, type: 2}
-  CorrectAnswer: "Misiones (Cataratas del Iguaz\xFA)"
+  CorrectAnswer: "8 a\xF1os"
   WrongAnswers:
-  - Mendoza (Capital/ San Rafael)
-  - "C\xF3rdoba (Villa general Belgrano)"
-  - "Europa (Espa\xF1a/ Italia)"
-  - Corea del Norte
-  - Chile
-  - U.S.A (california)
-  - Japon
+  - "6 a\xF1os"
+  - "7 a\xF1os"
+  - "9 a\xF1os"
+  - "15 a\xF1os"
+  - "100 a\xF1os"
+  - "20 a\xF1os"
+  - Es Inmortal, es una Sailor Moon
   difficulty: 1

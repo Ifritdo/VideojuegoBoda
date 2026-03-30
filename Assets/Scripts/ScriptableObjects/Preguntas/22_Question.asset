@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 878ca46f6ec18a84ebcf1e95af3e73a2, type: 3}
-  m_Name: 13_Question
+  m_Name: 22_Question
   m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
-  id: 13
-  QuestionText: "\xBFCu\xE1l fue el primer destino de viaje que tuvieron los novios?"
+  id: 22
+  QuestionText: "\xBFQu\xE9 forma ten\xEDa el anillo con el que le pidi\xF3 Juampi
+    casamiento a Marina?"
   Category: {fileID: 11400000, guid: 37f6a9afdd31b4441813019268079c1b, type: 2}
-  CorrectAnswer: "Misiones (Cataratas del Iguaz\xFA)"
+  CorrectAnswer: Forma de mariposa
   WrongAnswers:
-  - Mendoza (Capital/ San Rafael)
-  - "C\xF3rdoba (Villa general Belgrano)"
-  - "Europa (Espa\xF1a/ Italia)"
-  - Corea del Norte
-  - Chile
-  - U.S.A (california)
-  - Japon
+  - "Forma de coraz\xF3n"
+  - Forma de cuadrados
+  - Forma de un infinito
+  - Ja No hubo Anillo
+  - Forma de la Esfera del Dragon
+  - El anillo era de dulce
   difficulty: 1

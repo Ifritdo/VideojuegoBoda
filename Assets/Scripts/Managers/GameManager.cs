@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+            AudioManager.Instance.PlaySFX("Boton");
         }
 
         if (!questionActive) return;
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
         if (currentTime <= 0f)
         {
             currentTime = 0f;
+            AudioManager.Instance.PlaySFX("Alarm");
             questionActive = false;
 
             OnTimeExpired();

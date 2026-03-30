@@ -15,7 +15,8 @@ MonoBehaviour:
   id: 11
   QuestionText: "Si le preguntan a Mari que estudio Juampi ella dir\xEDa:"
   Category: {fileID: 11400000, guid: 5ba15df48c9297945a74754011d9e812, type: 2}
-  CorrectAnswer: "Algo de inform\xE1tica (mientras busca el msj guardado con el nombre)"
+  CorrectAnswer: "Algo de inform\xE1tica bla bla(mientras busca el msj guardado con
+    el nombre)"
   WrongAnswers:
   - Seguridad de redes
   - "Programaci\xF3n"
