@@ -118,9 +118,6 @@ public class QuizUI : MonoBehaviour
         //
         // =========================================
 
-        if (GameManager.Instance.GetQuestionsAnswered() >= GameManager.Instance.GetMaxQuestions())
-            yield break;
-
         rouletteFlow.ReturnToRoulette();
     }
 
@@ -142,18 +139,6 @@ public class QuizUI : MonoBehaviour
             int correctIndex = quizManager.GetCorrectAnswerIndex();
             answerButtons[correctIndex]
                 .GetComponent<Image>().color = correctColor;
-        }
-    }
-
-    public void HideQuizUI()
-    {
-        questionText.gameObject.SetActive(false);
-        categoryText.gameObject.SetActive(false);
-        timerText.gameObject.SetActive(false);
-
-        foreach (var btn in answerButtons)
-        {
-            btn.gameObject.SetActive(false);
         }
     }
 }

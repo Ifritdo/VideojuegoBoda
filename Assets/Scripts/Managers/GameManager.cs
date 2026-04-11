@@ -15,10 +15,7 @@ public class GameManager : MonoBehaviour
     public float maxTime = 20f;
 
     [Header("UI")]
-    [SerializeField] private QuizUI quizUI;
-    [SerializeField] private ScoreUI scoreUI;
     [SerializeField] private GameOverUI gameOverUI;
-    [SerializeField] private GameObject cortinas;
 
     private float currentTime;
     private bool questionActive;
@@ -134,19 +131,18 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Esperando antes de mostrar panel final");
 
-        yield return new WaitForSeconds(2.5f);
-        quizUI.HideQuizUI();
-        scoreUI.HideScoreUI();
-        cortinas.SetActive(true);
-    }
-    public void OnCurtainClosed()
-    {
+        yield return new WaitForSeconds(3f);
+
         ScoreManager.Instance.SetFinalScore(totalScore);
 
         if (gameOverUI != null)
         {
+            Debug.Log("GameOverUI encontrado");
             gameOverUI.Show(totalScore);
-            gameOverUI.transform.SetAsLastSibling();
+        }
+        else
+        {
+            Debug.LogError("GameOverUI ES NULL");
         }
     }
 

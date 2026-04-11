@@ -7,9 +7,6 @@ public class ScoreUI : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI addScoreText;
-    [SerializeField] private GameObject textPuntaje;
-    [SerializeField] private GameObject textPuntajeTotal;
-    [SerializeField] private GameObject textVolverMenu;
 
     [Header("Animation")]
     [SerializeField] private float floatDuration = 1f;
@@ -72,12 +69,5 @@ public class ScoreUI : MonoBehaviour
     private void UpdateScoreText()
     {
         scoreText.text = currentScore.ToString();
-    }
-
-    public void HideScoreUI()
-    {
-        textPuntaje.SetActive(false);
-        textPuntajeTotal.SetActive(false);
-        textVolverMenu.SetActive(false);
     }
 }
