@@ -127,5 +127,6 @@ public class AudioManager : MonoBehaviour
     public void SetSFXVolume(float value)
     {
         sfxVolume = value;
+        sfxSource.volume = value;
     }
 }

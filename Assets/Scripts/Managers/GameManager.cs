@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -123,7 +124,14 @@ public class GameManager : MonoBehaviour
         questionActive = false;
         enabled = false;
 
-        Debug.Log("Intentando mostrar GameOverUI");
+        StartCoroutine(EndGameRoutine());
+    }
+
+    private IEnumerator EndGameRoutine()
+    {
+        Debug.Log("Esperando antes de mostrar panel final");
+
+        yield return new WaitForSeconds(3f);
 
         ScoreManager.Instance.SetFinalScore(totalScore);
 
