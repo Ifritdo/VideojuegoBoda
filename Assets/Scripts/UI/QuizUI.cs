@@ -100,25 +100,12 @@ public class QuizUI : MonoBehaviour
 
     private IEnumerator ReturnToRouletteRoutine()
     {
-        // Espera para que el jugador vea el resultado
         yield return new WaitForSeconds(2.5f);
 
-        // =========================================
-        // AQUÍ IRÁ LA ANIMACIÓN DE CORTINAS
-        // =========================================
-        //
-        // Cuando tengas la animación:
-        // 1. Activás panel cortinas
-        // 2. Esperás a que se cierren
-        // 3. Cambiás de estado (volver a ruleta)
-        // 4. Esperás que se abran
-        //
-        // Ejemplo futuro:
-        // yield return StartCoroutine(CurtainController.CloseAndOpen());
-        //
-        // =========================================
-
-        rouletteFlow.ReturnToRoulette();
+        if (GameManager.Instance.GetQuestionsAnswered() < GameManager.Instance.GetMaxQuestions())
+        {
+            rouletteFlow.ReturnToRoulette();
+        }
     }
 
     private void ShowAnswerFeedback(int selectedIndex, bool isCorrect)

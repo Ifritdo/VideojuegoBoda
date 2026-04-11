@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameOverUI gameOverUI;
+    [SerializeField] private GameObject cortinasCerrando;
 
     private float currentTime;
     private bool questionActive;
@@ -129,20 +130,17 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EndGameRoutine()
     {
-        Debug.Log("Esperando antes de mostrar panel final");
+        yield return new WaitForSeconds(2.5f);
 
-        yield return new WaitForSeconds(3f);
-
+        cortinasCerrando.SetActive(true);
+    }
+    public void OnCurtainClosed()
+    {
         ScoreManager.Instance.SetFinalScore(totalScore);
 
         if (gameOverUI != null)
         {
-            Debug.Log("GameOverUI encontrado");
             gameOverUI.Show(totalScore);
-        }
-        else
-        {
-            Debug.LogError("GameOverUI ES NULL");
         }
     }
 

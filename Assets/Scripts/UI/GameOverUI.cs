@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameOverUI : MonoBehaviour
 {
@@ -18,16 +19,21 @@ public class GameOverUI : MonoBehaviour
 
         finalScore = score;
 
-        finalScoreText.text = "Puntaje final: " + score;
+        finalScoreText.text = "" + score;
 
         int position = ScoreManager.Instance.GetPlayerPosition(score);
 
-        positionText.text = "Posición: #" + position;
+        positionText.text = "#" + position;
 
         if (position <= 20)
             rankingMessageText.text = "¡Entraste al Top 20!";
         else
             rankingMessageText.text = "No entraste al Top 20";
+
+        // IMPORTANTE
+        nameInput.text = "";
+        nameInput.Select();
+        nameInput.ActivateInputField();
     }
 
     public void GoToRanking()
